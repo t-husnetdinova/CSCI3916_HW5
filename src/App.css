@@ -49,3 +49,13 @@
   font-size: 3rem;
   background-color: dimgray;
 }
+
+.actors {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.reviews {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
