@@ -78,6 +78,7 @@ class Review extends Component {
             .then((res) =>
             {
                 console.log("res: " +JSON.stringify(res));
+                window.location.reload();
             })
     }
 
