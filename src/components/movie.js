@@ -14,6 +14,7 @@ import {
 import { Image } from 'react-bootstrap'
 import { withRouter } from "react-router-dom";
 import {fetchMovie} from "../actions/movieActions";
+import runtimeEnv from '@mars/heroku-js-runtime-env';
 
 //support routing by creating a new component
 class Review extends Component {
@@ -32,12 +33,15 @@ class Review extends Component {
     }
 
     writeReview() {
+        const env = runtimeEnv();
         let reviewParams =
             {
-              'movie_title': this.props.title,
-              'rating': this.state.details.rating,
-              'quote': this.state.details.quote
+              'movie_title': this.props.movieTitle,
+              'quote': this.state.details.quote,
+              'rating': this.state.details.rating
             };
+
+        console.log(JSON.stringify(reviewParams));
 
         let bodyParams = [];
         for(let key in reviewParams)
@@ -49,8 +53,9 @@ class Review extends Component {
 
         bodyParams = bodyParams.join("&");
 
+        console.log(JSON.stringify(bodyParams));
 
-        return fetch('https://csci3916-hw4-husnetdinova.herokuapp.com/reviews',
+        return fetch(`${env.REACT_APP_API_URL}/reviews`,
             {
                 method: 'POST',
                 mode: 'cors',
@@ -58,16 +63,17 @@ class Review extends Component {
                 headers:
                     {
                         'Accept': 'application/json',
-                        'Content-Type': 'application/x-www-urlencoded',
+                        'Content-Type': 'application/json',
                         'Authorization': localStorage.getItem('token')
                     },
-                body: bodyParams
+                body: JSON.stringify(reviewParams)
             })
 
             .then(response =>
                 {
-                    console.log("response: " +JSON.stringify(response));
-                    console.log("status: " + response.statusText)
+                    console.log("response: " + JSON.stringify(response));
+
+                    return response.json();
                 })
             .then((res) =>
             {
@@ -137,7 +143,7 @@ class Movie extends Component {
         const ReviewInfo = ({reviews}) => {
             return reviews.map((review, i) =>
                 <p key={i}>
-                <b>{review.reviewer_id}</b> {review.quote}
+                <b>{review.username}</b> {review.quote}
                     <Glyphicon glyph={'star'} /> {review.rating}
                 </p>
             );
