@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf617ac2-0bf5-4b0c-94fc-d5e678a54e37" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/movieheader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movieheader.js" afterDir="false" />
-    </list>
+    <list default="true" id="bf617ac2-0bf5-4b0c-94fc-d5e678a54e37" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -27,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/movieheader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+            <state relative-caret-position="225">
+              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -266,12 +264,12 @@
       <workItem from="1554336034091" duration="542000" />
       <workItem from="1554766036461" duration="201000" />
       <workItem from="1555985591451" duration="10275000" />
-      <workItem from="1556032817805" duration="14399000" />
+      <workItem from="1556032817805" duration="14670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25417000" />
+    <option name="totallyTimeSpent" value="25688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="132" y="23" width="1148" height="727" extended-state="0" />
@@ -429,8 +427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/movieheader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        <state relative-caret-position="225">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
